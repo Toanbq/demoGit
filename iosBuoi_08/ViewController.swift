@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
     let containerView : UIView = {
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
     var rotateAngle: CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Hello")
         setupUI()
         timerRotate = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true, block: {_ in self.blackView.transform = CGAffineTransform(rotationAngle: -.pi * self.rotateAngle/360)
             
